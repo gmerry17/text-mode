@@ -1,0 +1,56 @@
+{
+  "name": "Text Mode",
+  "version": "0.6.1",
+  "manifest_version": 2,
+  "description": "Browse the web without distractions via simple text based pages.",
+
+  "applications": {
+    "gecko": {
+      "id": "text-mode@example.com",
+      "strict_min_version": "55.0"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon_16x16.png",
+    "48": "icons/icon_48x48.png",
+    "128": "icons/icon_128x128.png"
+  },
+
+  "permissions": [
+    "storage", 
+    "webRequest", 
+    "webRequestBlocking", 
+    "<all_urls>"
+  ],
+
+  "options_ui": {
+    "page": "html/options.html",
+    "open_in_tab": true
+  },
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["css/tab.css"],
+      "js": ["js/tab.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": {
+      "16": "imgs/icon/icon-OFF@16px.png",
+      "32": "imgs/icon/icon-OFF@32px.png"
+    },
+    "default_title": "Set Text Mode on/off"
+  },
+
+  "web_accessible_resources": ["imgs/bg/*"]
+}

@@ -1,0 +1,106 @@
+/* ———————————————————————————————————— */
+/* LAYOUT */
+/* ———————————————————————————————————— */
+body {
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  background-color: #ccc;
+}
+#wrapper {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 570px;
+}
+#head {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  position: relative;
+  height: 192px;
+}
+#head img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 192px;
+  height: 192px;
+}
+#content {
+  clear: both;
+}
+/* ———————————————————————————————————— */
+/* TITLES */
+/* ———————————————————————————————————— */
+h1 {
+  font-size: 22px; /* 16px */
+  margin: 10px 0px 30px 0px;
+}
+h2 {
+  font-size: 14px;
+  margin: 30px 0px 10px 0px;
+}
+
+/* ———————————————————————————————————— */
+/* IMG SELECTOR */
+/* ———————————————————————————————————— */
+#bwMode,
+#videoMode {
+  margin: 0px;
+  padding: 0px;
+  li {
+    display: block;
+  }
+}
+#imageModeSolid,
+#imageModeStripes {
+  margin: 0px;
+  padding: 0px;
+  .selected {
+    box-shadow: inset 0 0 0 4px #777, inset 0 0 0 6px #fff;
+  }
+  li {
+    /* FG yellow: #fa3 or rgba(255, 170, 0) */
+    /* FG black: #000f */
+    --text-mode-fg-color: rgba(0, 0, 0, var(--text-mode-fg-opacity));
+    --text-mode-bg-color: rgba(0, 0, 0, var(--text-mode-bg-opacity));
+  }
+}
+#imageModeSolid li,
+#imageModeStripes li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 5px;
+  input {
+    display: none;
+  }
+  label {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+/* ———————————————————————————————————— */
+/* Solid vs Stripes */
+/* ———————————————————————————————————— */
+#imageModeSolid li {
+  background: var(--text-mode-fg-color) !important;
+}
+#imageModeStripes li {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--text-mode-fg-color),
+    var(--text-mode-fg-color) var(--text-mode-stripe-width),
+    var(--text-mode-bg-color) var(--text-mode-stripe-width),
+    var(--text-mode-bg-color) calc(var(--text-mode-stripe-width) * 2)
+  ) !important;
+}

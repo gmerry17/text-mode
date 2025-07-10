@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Mode</title>
+    <link rel="stylesheet" type="text/css" href="../css/tab.css" />
+    <link rel="stylesheet" type="text/css" href="../css/options.css" />
+  </head>
+  <body class="__text_mode_whitelisted__">
+    <form id="optionsForm">
+      <div id="wrapper">
+        <div id="head" class="">
+          <!-- <img src="../icons/icon_128x128.png" /> -->
+          <div id="icon_right">
+            <img src="../imgs/options/icon_384x384__right.png" />
+          </div>
+          <div id="icon_left">
+            <img src="../imgs/options/icon_384x384__left.png" />
+          </div>
+        </div>
+        <div>
+          <h2>Black and white mode</h2>
+          <ul id="bwMode">
+            <li>
+              <input type="checkbox" id="adjust_saturation_el" />
+              <label for="adjust_saturation_el">Desaturate colors</label>
+            </li>
+            <li>
+              <input type="checkbox" id="config_adjust_contrast_el" />
+              <label for="config_adjust_contrast_el">Increase contrast</label>
+            </li>
+            <li style="display: none">
+              <input type="checkbox" id="adjust_white_bg_el" />
+              <label for="adjust_white_bg_el">Use White Background</label>
+            </li>
+          </ul>
+        </div>
+        <!-- —————————————————— -->
+        <div>
+          <h2>Image replacement</h2>
+          <ul id="imageModeStripes" class="__text_mode_READY__">
+            <li id="imageModeStripesLi0" class="__text_mode_fg_10__">
+              <input
+                type="radio"
+                id="imageModeStripesRadio0"
+                name="imageReplacement"
+                value="stripes-10"
+              />
+              <label for="imageModeStripesRadio0"></label>
+            </li>
+            <li id="imageModeStripesLi1" class="__text_mode_fg_30__">
+              <input
+                type="radio"
+                id="imageModeStripesRadio1"
+                name="imageReplacement"
+                value="stripes-30"
+              />
+              <label for="imageModeStripesRadio1"></label>
+            </li>
+            <li id="imageModeStripesLi2" class="__text_mode_fg_50__">
+              <input
+                type="radio"
+                id="imageModeStripesRadio2"
+                name="imageReplacement"
+                value="stripes-50"
+              />
+              <label for="imageModeStripesRadio2"></label>
+            </li>
+            <li id="imageModeStripesLi3" class="__text_mode_fg_70__">
+              <input
+                type="radio"
+                id="imageModeStripesRadio3"
+                name="imageReplacement"
+                value="stripes-70"
+              />
+              <label for="imageModeStripesRadio3"></label>
+            </li>
+            <li id="imageModeStripesLi4" class="__text_mode_fg_90__">
+              <input
+                type="radio"
+                id="imageModeStripesRadio4"
+                name="imageReplacement"
+                value="stripes-90"
+              />
+              <label for="imageModeStripesRadio4"></label>
+            </li>
+          </ul>
+          <ul id="imageModeSolid">
+            <li id="imageModeSolidLi0" class="__text_mode_fg_10__">
+              <input
+                type="radio"
+                id="imageModeSolidRadio0"
+                name="imageReplacement"
+                value="solid-10"
+              />
+              <label for="imageModeSolidRadio0"></label>
+            </li>
+            <li id="imageModeSolidLi1" class="__text_mode_fg_30__">
+              <input
+                type="radio"
+                id="imageModeSolidRadio1"
+                name="imageReplacement"
+                value="solid-30"
+              />
+              <label for="imageModeSolidRadio1"></label>
+            </li>
+            <li id="imageModeSolidLi2" class="__text_mode_fg_50__">
+              <input
+                type="radio"
+                id="imageModeSolidRadio2"
+                name="imageReplacement"
+                value="solid-50"
+              />
+              <label for="imageModeSolidRadio2"></label>
+            </li>
+            <li id="imageModeSolidLi3" class="__text_mode_fg_70__">
+              <input
+                type="radio"
+                id="imageModeSolidRadio3"
+                name="imageReplacement"
+                value="solid-70"
+              />
+              <label for="imageModeSolidRadio3"></label>
+            </li>
+            <li id="imageModeSolidLi4" class="__text_mode_fg_90__">
+              <input
+                type="radio"
+                id="imageModeSolidRadio4"
+                name="imageReplacement"
+                value="solid-90"
+              />
+              <label for="imageModeSolidRadio4"></label>
+            </li>
+          </ul>
+        </div>
+        <!-- —————————————————— -->
+        <div>
+          <h2>Video mode</h2>
+          <ul id="videoMode">
+            <li>
+              <input type="checkbox" id="adjust_video_el" />
+              <label for="adjust_video_el">Disable videos</label>
+            </li>
+          </ul>
+        </div>
+        <!-- —————————————————— -->
+      </div>
+    </form>
+    <script src="../js/options.js"></script>
+  </body>
+</html>
